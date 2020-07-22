@@ -75,8 +75,18 @@ const India = () => {
               <Card.Title>
                 <h4>Confirmed</h4>
               </Card.Title>
-              <Card.Text>{latest.confirmed}</Card.Text>
-              <Card.Text>+{latest.cChanges}</Card.Text>
+              <Card.Text> <NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={latest.confirmed}
+              /></Card.Text>
+              <Card.Text>+<NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={latest.cChanges}
+              /></Card.Text>
             </Card.Body>
             <Card.Footer>
               <Svg1 />
@@ -87,7 +97,12 @@ const India = () => {
               <Card.Title>
                 <h4>Active</h4>
               </Card.Title>
-              <Card.Text>{latest.active}</Card.Text>
+              <Card.Text><NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={latest.active}
+              /></Card.Text>
             </Card.Body>
 
             <Card.Footer>
@@ -99,8 +114,18 @@ const India = () => {
               <Card.Title>
                 <h4>Recovered</h4>
               </Card.Title>
-              <Card.Text>{latest.recovered}</Card.Text>
-              <Card.Text>+{latest.rChanges}</Card.Text>
+              <Card.Text><NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={latest.recovered}
+              /></Card.Text>
+              <Card.Text>+<NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={latest.rChanges}
+              /></Card.Text>
             </Card.Body>
             <Card.Footer>
               <Svg3 />
@@ -111,8 +136,18 @@ const India = () => {
               <Card.Title>
                 <h4>Deaths</h4>
               </Card.Title>
-              <Card.Text>{latest.deaths}</Card.Text>
-              <Card.Text>+{latest.dChanges}</Card.Text>
+              <Card.Text><NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={latest.deaths}
+              /></Card.Text>
+              <Card.Text>+<NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={latest.dChanges}
+              /></Card.Text>
             </Card.Body>
             <Card.Footer>
               <Svg4 />
