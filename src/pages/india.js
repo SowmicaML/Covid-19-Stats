@@ -5,6 +5,7 @@ import CardDeck from "react-bootstrap/CardDeck";
 import "./india.css";
 import flag from "../images/flag.jpg";
 import RingLoader from "react-spinners/RingLoader";
+import NumberFormat from "react-number-format";
 import { Svg1, Svg2, Svg3, Svg4 } from "../components/svg";
 
 const India = () => {
