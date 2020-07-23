@@ -58,13 +58,69 @@ const Global = () => {
           />
           <Card.Body>
             <Card.Title>{data.country}</Card.Title>
-            <Card.Text>Cases: {data.cases}</Card.Text>
-            <Card.Text>Active: {data.active}</Card.Text>
-            <Card.Text>Critical: {data.critical}</Card.Text>
-            <Card.Text>Recovered: {data.recovered}</Card.Text>
-            <Card.Text>Deaths: {data.deaths}</Card.Text>
-            <Card.Text>Today's cases: {data.todayCases}</Card.Text>
-            <Card.Text>Today's death: {data.todayDeaths}</Card.Text>
+            <Card.Text>
+              Cases:{" "}
+              <NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={data.cases}
+              />
+            </Card.Text>
+            <Card.Text>
+              Active:{" "}
+              <NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={data.active}
+              />
+            </Card.Text>
+            <Card.Text>
+              Critical:{" "}
+              <NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={data.critical}
+              />
+            </Card.Text>
+            <Card.Text>
+              Recovered:{" "}
+              <NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={data.recovered}
+              />
+            </Card.Text>
+            <Card.Text>
+              Deaths:{" "}
+              <NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={data.deaths}
+              />
+            </Card.Text>
+            <Card.Text>
+              Today's cases:{" "}
+              <NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={data.todayCases}
+              />
+            </Card.Text>
+            <Card.Text>
+              Today's death:{" "}
+              <NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={data.todayDeaths}
+              />
+            </Card.Text>
           </Card.Body>
         </Card>
       </Col>
