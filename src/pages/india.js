@@ -44,16 +44,51 @@ const India = () => {
           style={{ backgroundColor: "#F8F9FA" }}
         >
           <td>{data.state}</td>
-          <td>{data.confirmed}</td>
-          <td>{data.active}</td>
-          <td>{data.recovered}</td>
-          <td>{data.deaths}</td>
+          <td>
+            <NumberFormat
+              displayType={"text"}
+              thousandSeparator={true}
+              thousandsGroupStyle="lakh"
+              value={data.confirmed}
+            />
+          </td>
+          <td>
+            <NumberFormat
+              displayType={"text"}
+              thousandSeparator={true}
+              thousandsGroupStyle="lakh"
+              value={data.active}
+            />
+          </td>
+          <td>
+            <NumberFormat
+              displayType={"text"}
+              thousandSeparator={true}
+              thousandsGroupStyle="lakh"
+              value={data.recovered}
+            />
+          </td>
+          <td>
+            <NumberFormat
+              displayType={"text"}
+              thousandSeparator={true}
+              thousandsGroupStyle="lakh"
+              value={data.deaths}
+            />
+          </td>
         </tr>
 
         {district.map((val, i) => (
           <tr className=" collapse" id={state} key={val.id}>
             <td>{val.id}</td>
-            <td>{val.confirmed}</td>
+            <td>
+              <NumberFormat
+                displayType={"text"}
+                thousandSeparator={true}
+                thousandsGroupStyle="lakh"
+                value={val.confirmed}
+              />
+            </td>
           </tr>
         ))}
       </>
@@ -76,18 +111,23 @@ const India = () => {
               <Card.Title>
                 <h4>Confirmed</h4>
               </Card.Title>
-              <Card.Text> <NumberFormat
-                displayType={"text"}
-                thousandSeparator={true}
-                thousandsGroupStyle="lakh"
-                value={latest.confirmed}
-              /></Card.Text>
-              <Card.Text>+<NumberFormat
-                displayType={"text"}
-                thousandSeparator={true}
-                thousandsGroupStyle="lakh"
-                value={latest.cChanges}
-              /></Card.Text>
+              <Card.Text>
+                <NumberFormat
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  thousandsGroupStyle="lakh"
+                  value={latest.confirmed}
+                />
+              </Card.Text>
+              <Card.Text>
+                +
+                <NumberFormat
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  thousandsGroupStyle="lakh"
+                  value={latest.cChanges}
+                />
+              </Card.Text>
             </Card.Body>
             <Card.Footer>
               <Svg1 />
@@ -98,12 +138,14 @@ const India = () => {
               <Card.Title>
                 <h4>Active</h4>
               </Card.Title>
-              <Card.Text><NumberFormat
-                displayType={"text"}
-                thousandSeparator={true}
-                thousandsGroupStyle="lakh"
-                value={latest.active}
-              /></Card.Text>
+              <Card.Text>
+                <NumberFormat
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  thousandsGroupStyle="lakh"
+                  value={latest.active}
+                />
+              </Card.Text>
             </Card.Body>
 
             <Card.Footer>
@@ -115,18 +157,23 @@ const India = () => {
               <Card.Title>
                 <h4>Recovered</h4>
               </Card.Title>
-              <Card.Text><NumberFormat
-                displayType={"text"}
-                thousandSeparator={true}
-                thousandsGroupStyle="lakh"
-                value={latest.recovered}
-              /></Card.Text>
-              <Card.Text>+<NumberFormat
-                displayType={"text"}
-                thousandSeparator={true}
-                thousandsGroupStyle="lakh"
-                value={latest.rChanges}
-              /></Card.Text>
+              <Card.Text>
+                <NumberFormat
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  thousandsGroupStyle="lakh"
+                  value={latest.recovered}
+                />
+              </Card.Text>
+              <Card.Text>
+                +
+                <NumberFormat
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  thousandsGroupStyle="lakh"
+                  value={latest.rChanges}
+                />
+              </Card.Text>
             </Card.Body>
             <Card.Footer>
               <Svg3 />
@@ -137,18 +184,23 @@ const India = () => {
               <Card.Title>
                 <h4>Deaths</h4>
               </Card.Title>
-              <Card.Text><NumberFormat
-                displayType={"text"}
-                thousandSeparator={true}
-                thousandsGroupStyle="lakh"
-                value={latest.deaths}
-              /></Card.Text>
-              <Card.Text>+<NumberFormat
-                displayType={"text"}
-                thousandSeparator={true}
-                thousandsGroupStyle="lakh"
-                value={latest.dChanges}
-              /></Card.Text>
+              <Card.Text>
+                <NumberFormat
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  thousandsGroupStyle="lakh"
+                  value={latest.deaths}
+                />
+              </Card.Text>
+              <Card.Text>
+                +
+                <NumberFormat
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  thousandsGroupStyle="lakh"
+                  value={latest.dChanges}
+                />
+              </Card.Text>
             </Card.Body>
             <Card.Footer>
               <Svg4 />
