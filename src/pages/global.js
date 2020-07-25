@@ -217,7 +217,7 @@ const Global = () => {
         >
           <Card.Body>
             <Card.Title>
-              <h4>Recovered</h4>
+              <h4>Deaths</h4>
             </Card.Title>
             <Card.Text>
               <NumberFormat
